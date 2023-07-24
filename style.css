@@ -1,0 +1,1055 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.not-main-links {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.not-main-links>div {
+    display: flex;
+    gap: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.custom-link {
+    color: black;
+    position: relative;
+    text-decoration: none;
+}
+
+.custom-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.custom-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.sub-header-slider {
+    width: 100%;
+    height: auto;
+
+}
+
+.sub-header-slide-content img {
+    width: 100%;
+
+}
+
+
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: calc(100%);
+    /* Змінено ширину слайдера для вміщення всіх слайдів */
+    animation: sliderAnimation 10s linear infinite;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 260px;
+    /* Додано висоту картинки як auto */
+}
+
+@keyframes sliderAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100%));
+        /* Змінено зсув на -200% ширини контейнера */
+    }
+}
+
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.de-touche {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.de-touche-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.de-touche-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.makeup-perfectos {
+    width: 600px;
+    height: 280px;
+    background: url(./images/lips_new\ 1.png);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition-duration: .6s;
+}
+
+.water-mark {
+    width: 90px;
+    height: 42px;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.mini-title {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.makeup-perfectos-content-container {
+    padding-left: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.op6 {
+    opacity: 0.6;
+}
+
+.makeup-perfectos:hover {
+    cursor: pointer;
+    filter: blur(2px);
+}
+
+.lov-ph-item {
+    width: 220px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition-duration: .6s;
+}
+
+.lov-ph-item:hover {
+    cursor: pointer;
+    filter: blur(2px);
+}
+
+.lov-ph-item-img-container {
+    width: 220px;
+    height: 192px;
+    background: url(./images/апдэйт_2\ 1.png) no-repeat;
+    background-size: 100%;
+}
+
+.waterMarkPh {
+    margin: 15px;
+    margin-top: 15px;
+}
+
+.price {
+    font-weight: lighter;
+    opacity: 0.8;
+}
+
+.lov-ph-item-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.productos-content-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-items: baseline;
+    align-items: center;
+    gap: 30px;
+}
+
+.productos-item-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productos-item-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition-duration: .6s;
+}
+
+.productos-item-link:hover {
+    filter: blur(2px);
+}
+
+.productos-item {}
+
+.verTodoBtn {
+    width: 200px;
+    background: transparent;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.verTodoBtn:hover {
+    cursor: pointer;
+    width: 180px;
+}
+
+.novedades {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.novedades-content-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.novedades-item-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.novedades-item {
+    width: 221px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-banner {
+    font-size: 42px;
+    line-height: 48px;
+}
+
+.text-banner {
+    padding-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.text-banner-container {
+    animation: moveText 10s linear infinite;
+    position: relative;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: auto;
+}
+
+.footer-title {
+    font-size: 30px;
+}
+
+.footer-input {
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.whiteBtn {
+    border: 1px solid white;
+    color: white;
+}
+
+.footer-column-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+
+.whiteColor {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.whiteColor::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.whiteColor:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.footer-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-icons-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media (min-width: 1241px) {
+
+}
+
+@media (min-width:950px) and (max-width: 1240px) {
+    .not-main-links {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .slider img {
+        height: 160px;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .novedades-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-column-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width:721px) and (max-width: 949px) {
+    .not-main-links {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .slider img {
+        height: 160px;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .productos-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* gap: 20px; */
+    }
+
+    .productos-item {
+        width: 40%;
+    }
+
+    .productos-item-link1 img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .novedades-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-title {
+        font-size: 26px;
+    }
+
+    nav {
+        width: 35%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 720px) {
+    .not-main-links {
+        display: none;
+    }
+
+    nav {
+        width: 40%;
+        gap: 15px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .slider img {
+        height: 160px;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .de-touche {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .makeup-perfectos-content-container {
+        padding-left: 40px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .productos-content-container {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-items: baseline;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .productos-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+    .footer-column-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 50px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 567px) {
+    .not-main-links {
+        display: none;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    nav {
+        width: 60%;
+        gap: 15px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .slider img {
+        height: 160px;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .de-touche {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .makeup-perfectos-content-container {
+        padding-left: 40px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .productos-content-container {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-items: baseline;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .productos-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+    .footer-column-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 50px;
+    }
+
+    .lov-ph-item {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition-duration: .6s;
+    }
+
+    .lov-ph-item-img-container {
+        width: 100%;
+        height: 192px;
+        background: url(./images/апдэйт_2\ 1.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: cover;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .novedades-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-column-container {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .productos-item-link1 img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .productos-item {
+        width: 100%;
+    }
+
+    .logo-container img {
+        width: 100px;
+        height: 20px;
+    }
+
+}
+
+@media (max-width: 319px)  {
+    .logo-container img {
+        width: 100px;
+        height: 20px;
+    }
+    
+    .not-main-links {
+        display: none;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav {
+        width: 70%;
+        gap: 15px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .slider img {
+        height: 160px;
+    }
+
+    .de-touche-cards-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .de-touche {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .makeup-perfectos-content-container {
+        padding-left: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .productos-content-container {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-items: baseline;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: 100%;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .productos-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+
+    .footer-column-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        
+    }
+
+    footer {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 50px;
+    }
+
+    .lov-ph-item {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition-duration: .6s;
+    }
+
+    .lov-ph-item-img-container {
+        width: 100%;
+        height: 192px;
+        background: url(./images/апдэйт_2\ 1.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .makeup-perfectos {
+        width: 100%;
+        height: 280px;
+        background: url(./images/lips_new\ 1.png) no-repeat;
+        background-size: cover;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transition-duration: .6s;
+    }
+
+    .novedades-item-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-column-container {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .productos-item-link1 img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .productos-item {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-input {
+        font-size: 14px;
+        padding: 5px;
+        color: white;
+        background: transparent;
+        border: 0px;
+        border-bottom: 2px solid white;
+    }
+
+    .footer-icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        
+    }
+}
